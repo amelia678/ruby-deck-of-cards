@@ -7,7 +7,6 @@ suits = ['H', 'D', 'S', 'C']
 
 values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 
-# puts suits
 
 deck = []
 
@@ -18,7 +17,16 @@ suits.each do |suit|
 end
 
 
-puts deck.shuffle.first(2)
+prompt.yes?('Would you like to play cards')
+    if prompt == false
+        puts 'Darn!'
+    else
+        puts 'Lets play'
+        puts 'shuffling deck...'
+        puts 'take two cards'
+        puts  deck.shuffle.first(2)
+    end
 
-prompt.ask("Would you like to play cards")
+
+
 
