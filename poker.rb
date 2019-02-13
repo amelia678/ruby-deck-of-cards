@@ -16,16 +16,19 @@ suits.each do |suit|
     end
 end
 
+name = prompt.ask('What is your name?')
 
-prompt.yes?('Would you like to play cards')
-    if prompt == false
-        puts 'Darn!'
-    else
-        puts 'Lets play'
-        puts 'shuffling deck...'
-        puts 'take two cards'
-        puts  deck.shuffle.first(2)
-    end
+
+is_cards = prompt.yes?("Would you like to play cards, #{name}?")
+if is_cards
+    puts 'Lets play'
+    puts 'shuffling deck...'
+    puts 'take two cards'
+    puts  deck.shuffle.first(2)
+    
+else
+    puts 'Darn!' 
+end
 
 
 
